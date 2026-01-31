@@ -3,6 +3,19 @@ import { Link } from 'react-router-dom';
 
 const projects = [
   {
+    id: 'salary-booking',
+    title: 'Lönesamtal 2026',
+    description: 'Bokningssystem för årets lönesamtal. Välj en tid som passar och bekräfta din plats i Aludden eller Edsviken.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+    ),
+    link: '/booking',
+    tags: ['HR', 'Intern', 'Bokning'],
+    status: 'Aktiv'
+  },
+  {
     id: 'grade-form',
     title: 'Betygsblankett',
     description: 'Officiell blankett för ändring eller rättelse av betyg i Danderyds kommun. Optimerad för PDF-export och högkvalitativ utskrift.',
@@ -28,19 +41,6 @@ const projects = [
     link: '/placeholder',
     tags: ['Data', 'Charts'],
     status: 'Planerad'
-  },
-  {
-    id: 'external-demo',
-    title: 'Extern Dokumentation',
-    description: 'Länk till projektdokumentation eller externa resurser som används i arbetet.',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-      </svg>
-    ),
-    link: '/placeholder',
-    tags: ['Länk', 'Info'],
-    status: 'Extern'
   }
 ];
 
@@ -71,8 +71,8 @@ const Dashboard: React.FC = () => {
                 {project.icon}
               </div>
               <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded ${
-                project.status === 'Färdig' ? 'bg-green-50 text-green-600' : 
-                project.status === 'Extern' ? 'bg-amber-50 text-amber-600' : 'bg-slate-100 text-slate-500'
+                project.status === 'Aktiv' ? 'bg-blue-50 text-blue-600' :
+                project.status === 'Färdig' ? 'bg-green-50 text-green-600' : 'bg-slate-100 text-slate-500'
               }`}>
                 {project.status}
               </span>
@@ -95,16 +95,6 @@ const Dashboard: React.FC = () => {
             </div>
           </Link>
         ))}
-      </div>
-
-      <div className="mt-20 pt-12 border-t border-slate-200 text-center">
-        <h2 className="text-sm font-bold text-slate-400 uppercase tracking-[0.2em] mb-4">Teknisk Stack</h2>
-        <div className="flex flex-wrap justify-center gap-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-           <span className="font-bold text-lg">React 19</span>
-           <span className="font-bold text-lg">Tailwind CSS</span>
-           <span className="font-bold text-lg">TypeScript</span>
-           <span className="font-bold text-lg">ESM Native</span>
-        </div>
       </div>
     </div>
   );

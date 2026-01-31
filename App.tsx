@@ -1,8 +1,8 @@
-
 import React from 'react';
-import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import GradeChangeForm from './components/GradeChangeForm';
+import SalaryBooking from './components/SalaryBooking';
 import { Layout } from './components/Layout';
 
 const App: React.FC = () => {
@@ -12,6 +12,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/grade-form" element={<GradeChangeForm />} />
+          <Route path="/booking" element={<SalaryBooking />} />
           {/* Placeholder for future projects */}
           <Route path="/placeholder" element={
             <div className="max-w-4xl mx-auto py-20 text-center">
