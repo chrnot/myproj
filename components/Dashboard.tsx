@@ -16,6 +16,20 @@ const projects = [
     status: 'Aktiv'
   },
   {
+    id: 'kolada-analysis',
+    title: 'Analys Dashboard',
+    description: 'Datadriven kommunanalys kopplad till Kolada-databasen. Visualisera nyckeltal och generera AI-insikter för Danderyd.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+      </svg>
+    ),
+    link: '/analysis',
+    tags: ['Data', 'Kolada', 'AI'],
+    status: 'Aktiv'
+  },
+  {
     id: 'grade-form',
     title: 'Betygsblankett',
     description: 'Officiell blankett för ändring eller rättelse av betyg i Danderyds kommun. Optimerad för PDF-export och högkvalitativ utskrift.',
@@ -27,20 +41,6 @@ const projects = [
     link: '/grade-form',
     tags: ['Admin', 'Skola', 'PDF'],
     status: 'Färdig'
-  },
-  {
-    id: 'placeholder-1',
-    title: 'Analys Dashboard',
-    description: 'Ett kommande verktyg för att visualisera resultat och trender inom utbildningssektorn.',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
-      </svg>
-    ),
-    link: '/placeholder',
-    tags: ['Data', 'Charts'],
-    status: 'Planerad'
   }
 ];
 
