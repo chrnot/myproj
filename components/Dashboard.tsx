@@ -3,6 +3,20 @@ import { Link } from 'react-router-dom';
 
 const projects = [
   {
+    id: 'rektorer-gbg',
+    title: 'Rektorer GBG',
+    description: 'Komplett resplan och agenda för rektorsgruppens planeringsresa till Göteborg 16-18 mars 2026.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+      </svg>
+    ),
+    link: '/rektorer-gbg',
+    tags: ['Resa', 'Planering', 'GBG'],
+    status: 'Planerad'
+  },
+  {
     id: 'salary-booking',
     title: 'Lönesamtal 2026',
     description: 'Bokningssystem för årets lönesamtal. Välj en tid som passar och bekräfta din plats i Aludden eller Edsviken.',
@@ -72,7 +86,8 @@ const Dashboard: React.FC = () => {
               </div>
               <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded ${
                 project.status === 'Aktiv' ? 'bg-blue-50 text-blue-600' :
-                project.status === 'Färdig' ? 'bg-green-50 text-green-600' : 'bg-slate-100 text-slate-500'
+                project.status === 'Färdig' ? 'bg-green-50 text-green-600' : 
+                project.status === 'Planerad' ? 'bg-amber-50 text-amber-600' : 'bg-slate-100 text-slate-500'
               }`}>
                 {project.status}
               </span>
