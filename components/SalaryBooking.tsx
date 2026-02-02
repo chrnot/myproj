@@ -7,7 +7,7 @@ const initialSlots = [
   { id: 1, date: '5 feb', time: '10.30-10.55', location: 'Aludden mötesparken', bookedBy: null },
   { id: 2, date: '5 feb', time: '11.00-11.25', location: 'Aludden mötesparken', bookedBy: null },
   { id: 3, date: '5 feb', time: '11.30-11.55', location: 'Aludden mötesparken', bookedBy: null },
-  { id: 4, date: '11 feb', time: '10.30-10.55', location: 'Edsviken mötesparken', bookedBy: null },
+  { id: 4, date: '11 feb', time: '10.30-10.55', location: 'Edsviken mötesparken', bookedBy: 'TY' },
   { id: 5, date: '11 feb', time: '11.00-11.25', location: 'Edsviken mötesparken', bookedBy: null },
   { id: 6, date: '11 feb', time: '11.30-11.55', location: 'Edsviken mötesparken', bookedBy: null },
 ];
@@ -64,8 +64,8 @@ const SalaryBooking: React.FC = () => {
             </h2>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
               {employees.map(initials => {
-                // Kolla om personen redan har bokat något (lokalt)
-                const alreadyBooked = Object.values(localBookings).includes(initials);
+                // Kolla om personen redan har bokat något (lokalt eller hårdkodat)
+                const alreadyBooked = Object.values(localBookings).includes(initials) || initialSlots.some(s => s.bookedBy === initials);
                 
                 return (
                   <button
