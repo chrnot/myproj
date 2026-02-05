@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 const initialSlots = [
   { id: 1, date: '5 feb', time: '10.30-10.55', location: 'Aludden mötesparken', bookedBy: null },
   { id: 2, date: '5 feb', time: '11.00-11.25', location: 'Aludden mötesparken', bookedBy: null },
-  { id: 3, date: '5 feb', time: '11.30-11.55', location: 'Aludden mötesparken', bookedBy: null },
+  { id: 3, date: '5 feb', time: '11.30-11.55', location: 'Aludden mötesparken', bookedBy: 'AK' },
   { id: 4, date: '11 feb', time: '10.30-10.55', location: 'Edsviken mötesparken', bookedBy: 'TY' },
   { id: 5, date: '11 feb', time: '11.00-11.25', location: 'Edsviken mötesparken', bookedBy: null },
   { id: 6, date: '11 feb', time: '11.30-11.55', location: 'Edsviken mötesparken', bookedBy: null },

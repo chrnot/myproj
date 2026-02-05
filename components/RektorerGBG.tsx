@@ -5,7 +5,6 @@ const RektorerGBG: React.FC = () => {
     {
       date: 'Måndag 16 mars',
       theme: 'Resa & Ankomst',
-      // Abstrakt bild av rörelse/strategi (Ledarskap i rörelse)
       image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200',
       events: [
         { time: '14:09', title: 'Tåg mot Göteborg', desc: 'Avgång från Stockholms Centralstation.', icon: '🚂' },
@@ -16,21 +15,20 @@ const RektorerGBG: React.FC = () => {
     {
       date: 'Tisdag 17 mars',
       theme: 'Studiebesök & Nätverkande',
-      // Bild på professionellt samarbete/workshop
       image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1200',
       events: [
-        { time: '08:00', title: 'Frukost', desc: 'Frukostbuffé på hotellet.', icon: '☕' },
-        { time: 'Förmiddag', title: 'Hvidfeldtska Gymnasiet', desc: 'Studiebesök. Kontakt: Helena Franke.', icon: '🏫', link: 'https://www.google.com/maps/search/?api=1&query=Hvidfeldtska+gymnasiet' },
-        { time: 'Mellan', title: 'Fika: Da Matteo', desc: 'Diskussion och kaffe på Magasinsgatan 17A.', icon: '🥐', link: 'https://www.google.com/maps/search/?api=1&query=Da+Matteo+Magasinsgatan' },
-        { time: 'Lunch', title: 'Sopplunch: Berzelii Choklad', desc: 'Magasinsgatan 12. Alternativ: Wijkanders vid NCM.', icon: '🥣', link: 'https://www.google.com/maps/search/?api=1&query=Berzelii+Choklad+Göteborg' },
-        { time: 'Eftermiddag', title: 'Mathivation', desc: 'Västsvenska Handelskammaren, Parkgatan 49. Möte med Raja.', icon: '📐', link: 'https://www.google.com/maps/search/?api=1&query=Parkgatan+49+Göteborg' },
+        { time: '06:30-08:00', title: 'Egen tid / Tidig frukost', desc: 'Möjlighet till egna aktiviteter eller tidig frukost (serveras från 06:30).', icon: '🌅' },
+        { time: '08:00-09:30', title: 'Gemensam Frukost & Diskussion', desc: 'Frukostbuffé på hotellet. Sista timmen (från 08:30) viks åt gemensam diskussion kring matematikundervisningen på våra skolor och generella utmaningar.', icon: '☕' },
+        { time: '10:30-12:00', title: 'Studiebesök: Hvidfeldtska Gymnasiet', desc: 'Helena Franke tar emot oss för rundvandring och samtal om deras pedagogiska arbete.', icon: '🏫', link: 'https://www.google.com/maps/search/?api=1&query=Hvidfeldtska+gymnasiet' },
+        { time: '12:30', title: 'Lunch: Berzelii Choklad', desc: 'Magasinsgatan 12. Sopplunch i hjärtat av Göteborg.', icon: '🥣', link: 'https://www.google.com/maps/search/?api=1&query=Berzelii+Choklad+Göteborg' },
+        { time: '13:30', title: 'Mathivation', desc: 'Västsvenska Handelskammaren, Parkgatan 49. Möte med Raja.', icon: '📐', link: 'https://www.google.com/maps/search/?api=1&query=Parkgatan+49+Göteborg' },
+        { time: '15:00', title: 'Eftermiddagsfika: Da Matteo', desc: 'Diskussion och kaffe på Magasinsgatan 17A.', icon: '🥐', link: 'https://www.google.com/maps/search/?api=1&query=Da+Matteo+Magasinsgatan' },
         { time: '19:15', title: 'Middag på Levantine', desc: 'Aschebergsgatan 22. Fransk New York Bistro.', icon: '🍷', link: 'https://www.google.com/maps/search/?api=1&query=Levantine+Göteborg' }
       ]
     },
     {
       date: 'Onsdag 18 mars',
       theme: 'Matematik & Kultur',
-      // Matematik-fokus: Abstrakt bild med ekvationer/geometri
       image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=1200',
       events: [
         { time: '08:30-09:30', title: 'Eget arbete/Avstämning', desc: 'Uppföljning på hotellet.', icon: '📝' },
@@ -126,12 +124,6 @@ const RektorerGBG: React.FC = () => {
 
         <div className="lg:col-span-4 space-y-8">
           <div className="bg-slate-950 rounded-[3.5rem] p-12 text-white shadow-2xl sticky top-28 border border-slate-800">
-            <div className="absolute top-0 right-0 p-8 opacity-10">
-              <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M11 2v20c-5.07 0-9.22-3.9-9.95-8.91l-.05-.09h2.02c.7 3.91 4.09 6.91 8.13 7.09V11h8.79l.11-.05c-1.12-4.14-4.88-7.15-9.35-7.15V2z"></path>
-              </svg>
-            </div>
-            
             <h3 className="text-[11px] font-black uppercase tracking-[0.5em] text-blue-500 mb-12 text-center border-b border-white/5 pb-8">Reseinformation</h3>
             
             <div className="space-y-12">
